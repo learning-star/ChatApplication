@@ -34,3 +34,5 @@ message(STATUS "Runtime output directory: ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
 add_subdirectory(src/common)
 add_subdirectory(src/server)
 add_subdirectory(src/client)
+# 添加 spdlog 子模块目录
+add_subdirectory(extern/spdlog)
