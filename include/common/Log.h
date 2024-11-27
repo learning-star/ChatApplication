@@ -1,4 +1,3 @@
-
 #pragma once
 //
 // logging system is based on the spdlog logging library (https://github.com/gabime/spdlog)
@@ -75,6 +74,11 @@ namespace ChatApp {
 		inline static std::map<std::string, TagDetails> s_EnabledTags;
 	};
 
+	class ScopeForLog {
+	public:
+		ScopeForLog();
+		~ScopeForLog();
+	};
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

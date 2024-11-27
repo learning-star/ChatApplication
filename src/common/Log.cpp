@@ -1,4 +1,4 @@
-#include "common/log.h"
+#include "common/Log.h"
 
 #include "spdlog/sinks/stdout_color_sinks.h"
 #include "spdlog/sinks/basic_file_sink.h"
@@ -61,4 +61,11 @@ namespace ChatApp {
 		spdlog::drop_all();
 	}
 
+	ScopeForLog::ScopeForLog() {
+		Log::Init();
+	}
+
+	ScopeForLog::~ScopeForLog() {
+		Log::Shutdown();
+	}
 }
